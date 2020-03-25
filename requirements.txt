@@ -4,3 +4,8 @@ djangorestframework==3.11.0
 djangorestframework-jwt==1.11.0
 mysqlclient==1.4.6
 jsonfield==3.1.0
+elasticsearch==7.5.1
+elasticsearch-dsl==7.1.0
+boto3==1.12.27
+requests==2.22.0
+requests-aws4auth==0.9
