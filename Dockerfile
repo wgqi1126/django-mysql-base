@@ -7,12 +7,11 @@ RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.11/m
 
 RUN mkdir /logs && chmod o+w /logs
 
-COPY . /app
-
+COPY requirements.txt /app
 RUN pip install -r requirements.txt
+
+COPY . /app
 
 EXPOSE 8080
 
-ENTRYPOINT ["python", "manage.py", "migrate"]
-
-CMD ["python", "manage.py", "runserver", "0:8080"]
+CMD python manage.py migrate && python manage.py runserver 0:8080

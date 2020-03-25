@@ -2,6 +2,7 @@ import http.server
 import socketserver
 import sys
 
+print('argv:', sys.argv)
 if len(sys.argv) < 2:
     raise Exception('need args')
 
